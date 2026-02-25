@@ -4,72 +4,87 @@
     <meta charset="UTF-8">
     <title>Moisés Roth | Applications</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Moisés Roth - IAM, SailPoint, Automation and FastAPI Applications">
 
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #0f172a;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #0f172a, #111827);
             color: #f1f5f9;
         }
 
         header {
             text-align: center;
-            padding: 60px 20px 30px 20px;
+            padding: 80px 20px 40px 20px;
         }
 
         header h1 {
             margin: 0;
-            font-size: 36px;
+            font-size: 40px;
+            letter-spacing: 1px;
         }
 
         header p {
             color: #94a3b8;
-            margin-top: 10px;
+            margin-top: 15px;
+            font-size: 16px;
         }
 
         .container {
             max-width: 1100px;
             margin: auto;
-            padding: 20px;
+            padding: 30px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
 
         .card {
-            background: #1e293b;
-            padding: 25px;
-            border-radius: 12px;
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 16px;
             transition: 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            border: 1px solid rgba(148, 163, 184, 0.1);
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+            transform: translateY(-6px);
+            border-color: #3b82f6;
         }
 
         .card h2 {
             margin-top: 0;
-            font-size: 20px;
+            font-size: 22px;
         }
 
         .card p {
             color: #cbd5e1;
             font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .status {
+            display: inline-block;
+            font-size: 11px;
+            background: #16a34a;
+            padding: 4px 8px;
+            border-radius: 5px;
+            margin-bottom: 15px;
         }
 
         .card a {
             display: inline-block;
-            margin-top: 15px;
+            margin-top: 20px;
             text-decoration: none;
             background: #3b82f6;
             color: white;
-            padding: 10px 15px;
-            border-radius: 6px;
-            font-weight: bold;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-weight: 600;
             font-size: 14px;
+            transition: 0.3s ease;
         }
 
         .card a:hover {
@@ -78,7 +93,7 @@
 
         footer {
             text-align: center;
-            padding: 40px 20px;
+            padding: 60px 20px 40px 20px;
             font-size: 13px;
             color: #64748b;
         }
@@ -99,32 +114,36 @@
 <div class="container">
 
     <div class="card">
+        <div class="status">Online</div>
         <h2>GPCA FastAPI</h2>
-        <p>FastAPI application for GPCA integrations and identity processing.</p>
+        <p>FastAPI application for GPCA integrations, identity processing and IAM automation workflows.</p>
         <a href="https://fastapi-gpca.onrender.com/" target="_blank">
             Open Application →
         </a>
     </div>
 
     <div class="card">
+        <div class="status">Online</div>
         <h2>ISC Flat File Manager</h2>
-        <p>Tool for managing and testing SailPoint ISC flat file sources.</p>
-        <a href="https://isc_flat_file_manager.onrender.com/" target="_blank">
+        <p>Tool for managing and validating SailPoint ISC flat file sources and provisioning logic.</p>
+        <a href="https://isc-flat-file-manager.onrender.com/" target="_blank">
             Open Application →
         </a>
     </div>
 
     <div class="card">
+        <div class="status">Online</div>
         <h2>Web Python Execution</h2>
-        <p>Execute Python scripts via web interface for testing and automation.</p>
-        <a href="https://web_python_execution.onrender.com/" target="_blank">
+        <p>Web-based Python execution environment for automation testing and quick script validation.</p>
+        <a href="https://web-python-execution.onrender.com/" target="_blank">
             Open Application →
         </a>
     </div>
 
     <div class="card">
+        <div class="status">Online</div>
         <h2>Magic Page</h2>
-        <p>Interactive experiment page hosted on Vercel.</p>
+        <p>Interactive experiment page hosted on Vercel for dynamic web testing and creative demos.</p>
         <a href="https://moisesroth.vercel.app/magica3.html" target="_blank">
             Open Application →
         </a>
@@ -133,8 +152,8 @@
 </div>
 
 <footer>
-    © 2026 Moisés Roth • Built with GitHub Pages  
-    <br>
+    © 2026 Moisés Roth  
+    <br><br>
     <a href="https://github.com/moisesroth" target="_blank">GitHub Profile</a>
 </footer>
 
