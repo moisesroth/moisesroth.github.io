@@ -1,1 +1,142 @@
-<h1>My Portifolio</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Moisés Roth | Applications</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #f1f5f9;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 30px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            color: #94a3b8;
+            margin-top: 10px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            transition: 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            font-size: 20px;
+        }
+
+        .card p {
+            color: #cbd5e1;
+            font-size: 14px;
+        }
+
+        .card a {
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+            background: #3b82f6;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .card a:hover {
+            background: #2563eb;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        footer a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Moisés Roth</h1>
+    <p>Identity & Access Management • SailPoint • Automation • FastAPI</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>GPCA FastAPI</h2>
+        <p>FastAPI application for GPCA integrations and identity processing.</p>
+        <a href="https://fastapi-gpca.onrender.com/" target="_blank">
+            Open Application →
+        </a>
+    </div>
+
+    <div class="card">
+        <h2>ISC Flat File Manager</h2>
+        <p>Tool for managing and testing SailPoint ISC flat file sources.</p>
+        <a href="https://isc_flat_file_manager.onrender.com/" target="_blank">
+            Open Application →
+        </a>
+    </div>
+
+    <div class="card">
+        <h2>Web Python Execution</h2>
+        <p>Execute Python scripts via web interface for testing and automation.</p>
+        <a href="https://web_python_execution.onrender.com/" target="_blank">
+            Open Application →
+        </a>
+    </div>
+
+    <div class="card">
+        <h2>Magic Page</h2>
+        <p>Interactive experiment page hosted on Vercel.</p>
+        <a href="https://moisesroth.vercel.app/magica3.html" target="_blank">
+            Open Application →
+        </a>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Moisés Roth • Built with GitHub Pages  
+    <br>
+    <a href="https://github.com/moisesroth" target="_blank">GitHub Profile</a>
+</footer>
+
+</body>
+</html>
