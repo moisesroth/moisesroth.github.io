@@ -31,7 +31,7 @@ h1 {
     padding-bottom: 10px;
 }
 
-/* GRID 3 COLUNAS FIXO */
+/* GRID FIXO 3 COLUNAS */
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -55,8 +55,8 @@ h1 {
     background: rgba(30,41,59,0.8);
     padding: 25px;
     border-radius: 12px;
-    transition: 0.2s;
     border: 1px solid rgba(148,163,184,0.1);
+    transition: 0.2s;
 }
 
 .card:hover {
@@ -96,6 +96,7 @@ h1 {
 }
 </style>
 </head>
+
 <body>
 
 <div class="container">
@@ -104,7 +105,6 @@ h1 {
 
 <!-- ===================== -->
 <h2 class="section">SailPoint Tools</h2>
-
 <div class="grid">
 
 <div class="card">
@@ -121,7 +121,7 @@ h1 {
     <a href="https://isc-access-history.vercel.app/" target="_blank">Open</a>
 </div>
 
-<div class="card">
+<div class="card" data-private="true">
     <div class="tag">SailPoint</div>
     <h3>ISC Auto Documentation</h3>
     <p>Automatically generate documentation from ISC configuration.</p>
@@ -132,7 +132,6 @@ h1 {
 
 <!-- ===================== -->
 <h2 class="section">API Tools</h2>
-
 <div class="grid">
 
 <div class="card">
@@ -146,10 +145,9 @@ h1 {
 
 <!-- ===================== -->
 <h2 class="section">Projects</h2>
-
 <div class="grid">
 
-<div class="card">
+<div class="card" data-private="true">
     <div class="tag">Personal</div>
     <h3>Nutri Check-in</h3>
     <p>Daily tracking application for habits and routine.</p>
@@ -160,20 +158,19 @@ h1 {
 
 <!-- ===================== -->
 <h2 class="section">Legacy</h2>
-
 <div class="grid">
 
-<div class="card">
+<div class="card" data-private="true">
     <div class="tag">Legacy</div>
     <h3>GPCA FastAPI (Legacy)</h3>
     <p>IAM backend for identity processing and integrations.</p>
     <a href="https://fastapi-gpca.onrender.com/" target="_blank">Open</a>
 </div>
 
-<div class="card">
+<div class="card" data-private="true">
     <div class="tag">Legacy</div>
     <h3>ISC Flat File Manager (Legacy)</h3>
-    <p>Original Render-hosted version of the ISC Flat File Manager.</p>
+    <p>Original Render-hosted version.</p>
     <a href="https://isc-flat-file-manager.onrender.com/" target="_blank">Open</a>
 </div>
 
@@ -187,6 +184,30 @@ h1 {
 </div>
 
 </div>
+
+<!-- ===================== -->
+<script>
+const params = new URLSearchParams(window.location.search);
+const tag = params.get("tag");
+
+// esconder privados
+if (tag !== "moisesroth") {
+    document.querySelectorAll('[data-private="true"]').forEach(el => {
+        el.style.display = "none";
+    });
+}
+
+// 🔥 esconder seções vazias
+document.querySelectorAll('.grid').forEach(grid => {
+    const visibleCards = Array.from(grid.children).filter(el => el.style.display !== "none");
+
+    if (visibleCards.length === 0) {
+        const sectionTitle = grid.previousElementSibling;
+        grid.style.display = "none";
+        if (sectionTitle) sectionTitle.style.display = "none";
+    }
+});
+</script>
 
 </body>
 </html>
