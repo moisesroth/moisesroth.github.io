@@ -1,188 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Moisés Roth | Applications</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Moisés Roth - IAM, SailPoint, Automation and FastAPI Applications">
+<meta charset="UTF-8">
+<title>Moisés Roth | Applications</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(135deg, #0f172a, #111827);
-            color: #f1f5f9;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg,#0f172a,#020617);
+    color: #f1f5f9;
+}
 
-        header {
-            text-align: center;
-            padding: 80px 20px 40px 20px;
-        }
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 40px;
-            letter-spacing: 1px;
-        }
+h1 {
+    text-align: center;
+}
 
-        header p {
-            color: #94a3b8;
-            margin-top: 15px;
-            font-size: 16px;
-        }
+.section {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: #94a3b8;
+    border-bottom: 1px solid #1e293b;
+    padding-bottom: 10px;
+}
 
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 30px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
+/* GRID 3 COLUNAS FIXO */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
 
-        .card {
-            background: rgba(30, 41, 59, 0.8);
-            backdrop-filter: blur(10px);
-            padding: 30px;
-            border-radius: 16px;
-            transition: 0.3s ease;
-            border: 1px solid rgba(148, 163, 184, 0.1);
-        }
+/* RESPONSIVO */
+@media(max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
-        .card:hover {
-            transform: translateY(-6px);
-            border-color: #3b82f6;
-        }
+@media(max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
 
-        .card h2 {
-            margin-top: 0;
-            font-size: 22px;
-        }
+.card {
+    background: rgba(30,41,59,0.8);
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.2s;
+    border: 1px solid rgba(148,163,184,0.1);
+}
 
-        .card p {
-            color: #cbd5e1;
-            font-size: 14px;
-            line-height: 1.6;
-        }
+.card:hover {
+    border-color: #3b82f6;
+}
 
-        .online {
-            display: inline-block;
-            font-size: 11px;
-            background: #16a34a;
-            padding: 4px 8px;
-            border-radius: 5px;
-            margin-bottom: 15px;
-        }
+.tag {
+    display: inline-block;
+    font-size: 11px;
+    background: #16a34a;
+    padding: 4px 8px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
 
-        .card a {
-            display: inline-block;
-            margin-top: 20px;
-            text-decoration: none;
-            background: #3b82f6;
-            color: white;
-            padding: 10px 18px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 14px;
-            transition: 0.3s ease;
-        }
+.card h3 {
+    margin: 10px 0;
+}
 
-        .card a:hover {
-            background: #2563eb;
-        }
+.card p {
+    color: #cbd5e1;
+    font-size: 14px;
+}
 
-        footer {
-            text-align: center;
-            padding: 60px 20px 40px 20px;
-            font-size: 13px;
-            color: #64748b;
-        }
+.card a {
+    display: inline-block;
+    margin-top: 15px;
+    background: #3b82f6;
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+}
 
-        footer a {
-            color: #3b82f6;
-            text-decoration: none;
-        }
-    </style>
+.card a:hover {
+    background: #2563eb;
+}
+</style>
 </head>
 <body>
 
-<header>
-    <h1>Moisés Roth</h1>
-    <p>Identity & Access Management • SailPoint • Automation • FastAPI</p>
-</header>
-
 <div class="container">
 
-    <div class="card">
-        <div class="online">python</div>
-        <h2>GPCA FastAPI</h2>
-        <p>FastAPI application for GPCA integrations, identity processing and IAM automation workflows.</p>
-        <a href="https://fastapi-gpca.onrender.com/" target="_blank">
-            Open Application →
-        </a>
-    </div>
+<h1>My Applications</h1>
 
-    <div class="card">
-        <div class="online">python</div>
-        <h2>ISC Flat File Manager</h2>
-        <p>Tool for managing and validating SailPoint ISC flat file sources and provisioning logic.</p>
-        <a href="https://isc-flat-file-manager.onrender.com/" target="_blank">
-            Open Application →
-        </a>
-    </div>
+<!-- ===================== -->
+<h2 class="section">SailPoint Tools</h2>
 
-    <div class="card">
-        <div class="online">python</div>
-        <h2>ISC Flat File Manager (new)</h2>
-        <p>Tool for managing and validating SailPoint ISC flat file sources and provisioning logic</p>
-        <a href="https://isc-flat-file-manager.vercel.app/" target="_blank">
-            Open Application →
-        </a>
-    </div>
+<div class="grid">
 
-    <div class="card">
-        <div class="online">python</div>
-        <h2>Web Python Execution</h2>
-        <p>Web-based Python execution environment for automation testing and quick script validation.</p>
-        <a href="https://web-python-execution.onrender.com/" target="_blank">
-            Open Application →
-        </a>
-    </div>
+<div class="card">
+    <div class="tag">SailPoint</div>
+    <h3>ISC Flat File Manager</h3>
+    <p>Tool for managing and testing flat file sources in ISC.</p>
+    <a href="https://isc-flat-file-manager.vercel.app/" target="_blank">Open</a>
+</div>
 
-    <div class="card">
-        <div class="online">html</div>
-        <h2>Access History</h2>
-        <p>Interactive experiment page hosted on Vercel for dynamic web testing and creative demos.</p>
-        <a href="https://moisesroth.vercel.app/magica2.html" target="_blank">
-            Open Application →
-        </a>
-    </div>
+<div class="card">
+    <div class="tag">SailPoint</div>
+    <h3>ISC Access History</h3>
+    <p>View identity lifecycle and access events.</p>
+    <a href="https://isc-access-history.vercel.app/" target="_blank">Open</a>
+</div>
 
-    <div class="card">
-        <div class="online">html</div>
-        <h2>Auto Documentation</h2>
-        <p>Interactive experiment page hosted on Vercel for dynamic web testing and creative demos.</p>
-        <a href="https://moisesroth.vercel.app/magica3.html" target="_blank">
-            Open Application →
-        </a>
-    </div>
-
-    <div class="card">
-        <div class="online">html</div>
-        <h2>Nutri Check-in</h2>
-        <p>Daily check-in application to track your routine, habits, and overall day status.</p>
-        <a href="https://nutri-checkin.vercel.app/" target="_blank">
-            Open Application →
-        </a>
-    </div>
+<div class="card">
+    <div class="tag">SailPoint</div>
+    <h3>ISC Auto Documentation</h3>
+    <p>Automatically generate documentation from ISC configuration.</p>
+    <a href="https://moisesroth.vercel.app/magica3.html" target="_blank">Open</a>
+</div>
 
 </div>
 
-<footer>
-    © 2026 Moisés Roth  
-    <br><br>
-    <a href="https://github.com/moisesroth" target="_blank">GitHub Profile</a>
-</footer>
+<!-- ===================== -->
+<h2 class="section">API Tools</h2>
+
+<div class="grid">
+
+<div class="card">
+    <div class="tag">Python</div>
+    <h3>Web Python Execution</h3>
+    <p>Execute Python scripts directly from the browser.</p>
+    <a href="https://web-python-execution.onrender.com/" target="_blank">Open</a>
+</div>
+
+</div>
+
+<!-- ===================== -->
+<h2 class="section">Projects</h2>
+
+<div class="grid">
+
+<div class="card">
+    <div class="tag">Personal</div>
+    <h3>Nutri Check-in</h3>
+    <p>Daily tracking application for habits and routine.</p>
+    <a href="https://nutri-checkin.vercel.app/" target="_blank">Open</a>
+</div>
+
+</div>
+
+<!-- ===================== -->
+<h2 class="section">Legacy</h2>
+
+<div class="grid">
+
+<div class="card">
+    <div class="tag">Legacy</div>
+    <h3>GPCA FastAPI (Legacy)</h3>
+    <p>IAM backend for identity processing and integrations.</p>
+    <a href="https://fastapi-gpca.onrender.com/" target="_blank">Open</a>
+</div>
+
+<div class="card">
+    <div class="tag">Legacy</div>
+    <h3>ISC Flat File Manager (Legacy)</h3>
+    <p>Original Render-hosted version of the ISC Flat File Manager.</p>
+    <a href="https://isc-flat-file-manager.onrender.com/" target="_blank">Open</a>
+</div>
+
+<div class="card">
+    <div class="tag">Legacy</div>
+    <h3>Access History (Legacy)</h3>
+    <p>Original version of the access history interface.</p>
+    <a href="https://moisesroth.vercel.app/magica2.html" target="_blank">Open</a>
+</div>
+
+</div>
+
+</div>
 
 </body>
 </html>
