@@ -395,11 +395,6 @@ const previewModalTitle = document.getElementById("preview-modal-title");
 const previewModalImage = document.getElementById("preview-modal-image");
 const previewModalClose = document.getElementById("preview-modal-close");
 let activePreviewCard = null;
-const allAppsView = {
-    id: "all-apps",
-    title: "All Apps",
-    tone: "Browse every available app across all visible categories."
-};
 
 metaTotal.textContent = `${PortfolioShared.stats.apps} apps disponiveis`;
 
@@ -413,10 +408,7 @@ sectionsRoot.innerHTML = PortfolioShared.sections.map((section, index) => `
     </section>
 `).join("");
 
-nav.innerHTML = [
-    allAppsView,
-    ...PortfolioShared.sections
-].map((section, index) => `
+nav.innerHTML = PortfolioShared.sections.map((section, index) => `
     <button
         type="button"
         class="navbutton ${index === 0 ? "is-active" : ""}"
@@ -428,29 +420,6 @@ nav.innerHTML = [
 `).join("");
 
 function activateSection(sectionId) {
-    if (sectionId === allAppsView.id) {
-        document.querySelectorAll(".section").forEach((section) => {
-            section.hidden = false;
-        });
-
-        document.querySelectorAll(".navbutton").forEach((button) => {
-            const isActive = button.dataset.target === allAppsView.id;
-            button.classList.toggle("is-active", isActive);
-            button.setAttribute("aria-pressed", String(isActive));
-        });
-
-        heroTitle.textContent = allAppsView.title;
-        heroText.textContent = allAppsView.tone;
-        metaCurrent.textContent = `${PortfolioShared.stats.apps} apps em todas as areas`;
-
-        if (window.location.hash !== `#${allAppsView.id}`) {
-            history.replaceState(null, "", `#${allAppsView.id}`);
-        }
-
-        activePreviewCard = null;
-        return;
-    }
-
     const activeSection = PortfolioShared.sections.find((section) => section.id === sectionId) || PortfolioShared.sections[0];
 
     document.querySelectorAll(".section").forEach((section) => {
@@ -541,7 +510,7 @@ sectionsRoot.addEventListener("click", (event) => {
 });
 
 const initialSection = window.location.hash.replace("#", "");
-activateSection(initialSection || allAppsView.id);
+activateSection(initialSection || PortfolioShared.sections[0].id);
 </script>
 </body>
 </html>

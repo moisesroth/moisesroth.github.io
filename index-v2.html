@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moises Roth | Application Workspace</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    background: #edf2f7;
+    color: #16212e;
+}
+
+.app {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background: #0f1726;
+    color: #e8efff;
+    padding: 28px 22px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.sidebar h1 {
+    margin: 0 0 14px;
+    font-size: 1.7rem;
+}
+
+.sidebar p {
+    color: #9fb2cf;
+    line-height: 1.7;
+}
+
+.sidebar a {
+    color: #9bd0ff;
+    text-decoration: none;
+}
+
+.navlist {
+    margin: 26px 0;
+    display: grid;
+    gap: 10px;
+}
+
+.navlist a {
+    padding: 12px 14px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.04);
+}
+
+.meta {
+    margin-top: 28px;
+    display: grid;
+    gap: 10px;
+}
+
+.meta div {
+    border: 1px solid rgba(155,208,255,0.18);
+    border-radius: 14px;
+    padding: 12px;
+}
+
+.content {
+    padding: 28px;
+}
+
+.hero {
+    background: white;
+    border-radius: 28px;
+    padding: 28px;
+    border: 1px solid #d9e3ef;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    margin: 0 0 10px;
+    font-size: clamp(2rem, 5vw, 3.8rem);
+}
+
+.hero p,
+.section-head p,
+.card p {
+    color: #5c6b7d;
+    line-height: 1.7;
+}
+
+.section {
+    background: white;
+    border: 1px solid #d9e3ef;
+    border-radius: 24px;
+    padding: 22px;
+    margin-top: 16px;
+}
+
+.section-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 16px;
+    align-items: center;
+}
+
+.section-head h3 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.card {
+    background: #f7fafc;
+    border: 1px solid #e3ebf4;
+    border-radius: 18px;
+    padding: 18px;
+}
+
+.card-top {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.tag,
+.badge-new {
+    display: inline-flex;
+    padding: 5px 10px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 800;
+}
+
+.tag {
+    background: #dcecff;
+    color: #24558f;
+}
+
+.badge-new {
+    background: #d8f5de;
+    color: #1f6a30;
+}
+
+.card h3 {
+    margin: 14px 0 10px;
+    font-size: 1.06rem;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 12px;
+    color: #16212e;
+    font-weight: 700;
+}
+
+@media (max-width: 960px) {
+    .app {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+        height: auto;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+<body>
+<div class="app">
+    <aside class="sidebar">
+        <h1>Moises Roth</h1>
+        <p>A practical workspace for application access, organized by category and built for fast scanning.</p>
+        <a href="./index.html">Open classic view</a>
+        <nav class="navlist" id="nav"></nav>
+        <div class="meta" id="meta"></div>
+    </aside>
+    <main class="content">
+        <section class="hero">
+            <h2>Application workspace</h2>
+            <p>Useful if you want the page to feel organized and trustworthy first, with personality coming from layout discipline rather than heavy visual flourish.</p>
+        </section>
+        <div id="sections"></div>
+    </main>
+</div>
+<script src="./portfolio-data.js"></script>
+<script src="./shared.js"></script>
+<script>
+nav.innerHTML = PortfolioShared.sections.map((section) => `<a href="#${section.id}">${section.title}</a>`).join("");
+meta.innerHTML = `
+    <div>${PortfolioShared.stats.apps} visible apps</div>
+    <div>${PortfolioShared.stats.sections} visible sections</div>
+`;
+sections.innerHTML = PortfolioShared.sections.map((section) => `
+    <section class="section" id="${section.id}">
+        <div class="section-head">
+            <h3>${section.title}</h3>
+            <p>${section.tone}</p>
+        </div>
+        <div class="grid">${section.items.map((item) => PortfolioShared.card(item)).join("")}</div>
+    </section>
+`).join("");
+</script>
+</body>
+</html>

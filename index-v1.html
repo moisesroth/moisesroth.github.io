@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Moisés Roth | Applications</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg,#0f172a,#020617);
+    color: #f1f5f9;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.section {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: #94a3b8;
+    border-bottom: 1px solid #1e293b;
+    padding-bottom: 10px;
+}
+
+/* GRID FIXO 3 COLUNAS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* RESPONSIVO */
+@media(max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    background: rgba(30,41,59,0.8);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(148,163,184,0.1);
+    transition: 0.2s;
+}
+
+.card:hover {
+    border-color: #3b82f6;
+}
+
+.tag {
+    display: inline-block;
+    font-size: 11px;
+    background: #16a34a;
+    padding: 4px 8px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.card p {
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 15px;
+    background: #3b82f6;
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+}
+
+.card a:hover {
+    background: #2563eb;
+}
+
+.badge-new {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 10px;
+    background: #22c55e;
+    color: #022c22;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>My Applications</h1>
+
+<!-- ===================== -->
+<h2 class="section">SailPoint Tools</h2>
+<div class="grid">
+
+<div class="card">
+    <div class="tag">SailPoint</div>
+    <h3>
+        ISC CCG Log Reader
+        <span class="badge-new">NEW</span>
+    </h3>
+    <p>Tool for reading and analyzing Cloud Gateway (CCG) logs in SailPoint ISC.</p>
+    <a href="https://isc-ccg-log-reader.vercel.app/" target="_blank">Open</a>
+</div>
+
+<div class="card">
+    <div class="tag">SailPoint</div>
+    <h3>
+        ISC Flat File Manager
+        <span class="badge-new">NEW</span>
+    </h3>
+    <p>Tool for managing and testing flat file sources in ISC.</p>
+    <a href="https://isc-flat-file-manager.vercel.app/" target="_blank">Open</a>
+</div>
+
+<div class="card">
+    <div class="tag">SailPoint</div>
+    <h3>
+        ISC Access History
+        <span class="badge-new">NEW</span>
+    </h3>
+    <p>View identity lifecycle and access events.</p>
+    <a href="https://isc-access-history.vercel.app/" target="_blank">Open</a>
+</div>
+
+<div class="card">
+    <div class="tag">SailPoint</div>
+    <h3>
+        SailPoint One Page
+        <span class="badge-new">NEW</span>
+    </h3>
+    <p>Centralized one-page workspace for common SailPoint identity, access, and source tasks.</p>
+    <a href="https://isc-one-page.vercel.app/" target="_blank">Open</a>
+</div>
+
+<div class="card" data-private="true">
+    <div class="tag">SailPoint</div>
+    <h3>ISC Auto Documentation</h3>
+    <p>Automatically generate documentation from ISC configuration.</p>
+    <a href="https://moisesroth.vercel.app/magica3.html" target="_blank">Open</a>
+</div>
+
+</div>
+
+<!-- ===================== -->
+<h2 class="section">API Tools</h2>
+<div class="grid">
+
+<div class="card">
+    <div class="tag">Python</div>
+    <h3>Web Python Execution</h3>
+    <p>Execute Python scripts directly from the browser.</p>
+    <a href="https://web-python-execution.onrender.com/" target="_blank">Open</a>
+</div>
+
+</div>
+
+<!-- ===================== -->
+<h2 class="section">Projects</h2>
+<div class="grid">
+
+<div class="card" data-private="true">
+    <div class="tag">Personal</div>
+    <h3>Nutri Check-in</h3>
+    <p>Daily tracking application for habits and routine.</p>
+    <a href="https://nutri-checkin.vercel.app/" target="_blank">Open</a>
+</div>
+
+</div>
+
+<!-- ===================== -->
+<h2 class="section">Productivity Tools</h2>
+<div class="grid">
+
+<div class="card">
+    <div class="tag">Productivity</div>
+    <h3>
+        Daily Time Tracker
+        <span class="badge-new">NEW</span>
+    </h3>
+    <p>Track tasks throughout the day, log interruptions, and export personal time reports.</p>
+    <a href="https://mr-time-management.vercel.app/" target="_blank">Open</a>
+</div>
+
+</div>
+
+<!-- ===================== -->
+<h2 class="section">Legacy</h2>
+<div class="grid">
+
+<div class="card" data-private="true">
+    <div class="tag">Legacy</div>
+    <h3>GPCA FastAPI (Legacy)</h3>
+    <p>IAM backend for identity processing and integrations.</p>
+    <a href="https://fastapi-gpca.onrender.com/" target="_blank">Open</a>
+</div>
+
+<div class="card" data-private="true">
+    <div class="tag">Legacy</div>
+    <h3>ISC Flat File Manager (Legacy)</h3>
+    <p>Original Render-hosted version.</p>
+    <a href="https://isc-flat-file-manager.onrender.com/" target="_blank">Open</a>
+</div>
+
+<div class="card" data-private="true">
+    <div class="tag">Legacy</div>
+    <h3>Access History (Legacy)</h3>
+    <p>Original version of the access history interface.</p>
+    <a href="https://moisesroth.vercel.app/magica2.html" target="_blank">Open</a>
+</div>
+
+</div>
+
+</div>
+
+<!-- ===================== -->
+<script>
+const params = new URLSearchParams(window.location.search);
+const tag = params.get("tag");
+
+// esconder privados
+if (tag !== "moisesroth") {
+    document.querySelectorAll('[data-private="true"]').forEach(el => {
+        el.style.display = "none";
+    });
+}
+
+// 🔥 esconder seções vazias
+document.querySelectorAll('.grid').forEach(grid => {
+    const visibleCards = Array.from(grid.children).filter(el => el.style.display !== "none");
+
+    if (visibleCards.length === 0) {
+        const sectionTitle = grid.previousElementSibling;
+        grid.style.display = "none";
+        if (sectionTitle) sectionTitle.style.display = "none";
+    }
+});
+</script>
+
+</body>
+</html>
