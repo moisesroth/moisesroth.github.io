@@ -47,9 +47,27 @@
                     },
                     {
                         tag: "SailPoint",
+                        title: "ISC Transform Manager",
+                        description: "Build, inspect, and understand SailPoint transforms in one focused workspace.",
+                        url: "https://isc-transform-manager.vercel.app/",
+                        previewImage: "./assets/previews/isc-transform-manager.png",
+                        previewLabel: "Preview do ISC Transform Manager",
+                        isNew: true
+                    },
+                    {
+                        tag: "SailPoint",
                         title: "ISC Auto Documentation",
                         description: "Automatically generate documentation from ISC configuration.",
                         url: "https://moisesroth.vercel.app/magica3.html",
+                        private: true
+                    },
+                    {
+                        tag: "SailPoint",
+                        title: "ISC Certification Report",
+                        description: "Generate and review certification report data in SailPoint ISC.",
+                        url: "https://isc-certification-report.vercel.app/",
+                        previewImage: "./assets/previews/isc-certification-report.png",
+                        previewLabel: "Preview do ISC Certification Report",
                         private: true
                     }
                 ]
