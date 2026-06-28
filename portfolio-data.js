@@ -52,6 +52,7 @@
                         url: "https://isc-transform-manager.vercel.app/",
                         previewImage: "./assets/previews/isc-transform-manager.png",
                         previewLabel: "Preview do ISC Transform Manager",
+                        beta: true,
                         isNew: true
                     },
                     {

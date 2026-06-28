@@ -25,6 +25,7 @@
                         <div class="card-top">
                             <span class="tag">${escapeHtml(item.tag)}</span>
                             ${item.isNew ? '<span class="badge-new">NEW</span>' : ""}
+                            ${item.beta ? '<span class="badge-beta">BETA</span>' : ""}
                         </div>
                         <h3>${escapeHtml(item.title)}</h3>
                         <p>${escapeHtml(item.description)}</p>
