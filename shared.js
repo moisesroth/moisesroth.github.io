@@ -1,7 +1,7 @@
 (function () {
     const data = window.PORTFOLIO_DATA;
     const params = new URLSearchParams(window.location.search);
-    const privateMode = params.get("tag") === "moisesroth";
+    const privateMode = ["moises", "moisesroth"].includes(params.get("tag"));
 
     function escapeHtml(value) {
         return String(value)

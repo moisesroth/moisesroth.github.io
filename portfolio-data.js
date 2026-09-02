@@ -16,6 +16,7 @@
                         url: "https://isc-ccg-log-reader.vercel.app/",
                         previewImage: "./assets/previews/isc-ccg-log-reader.png",
                         previewLabel: "Preview do Log Reader",
+                        private: true,
                         isNew: true
                     },
                     {
@@ -25,6 +26,7 @@
                         url: "https://isc-flat-file-manager.vercel.app/",
                         previewImage: "./assets/previews/isc-flat-file-manager.png",
                         previewLabel: "Preview do Flat File Manager",
+                        private: true,
                         isNew: true
                     },
                     {
@@ -34,6 +36,7 @@
                         url: "https://isc-access-history.vercel.app/",
                         previewImage: "./assets/previews/isc-access-history.png",
                         previewLabel: "Preview do Access History",
+                        private: true,
                         isNew: true
                     },
                     {
@@ -43,6 +46,7 @@
                         url: "https://isc-one-page.vercel.app/",
                         previewImage: "./assets/previews/isc-one-page.png",
                         previewLabel: "Preview do SailPoint One Page",
+                        private: true,
                         isNew: true
                     },
                     {
@@ -52,6 +56,7 @@
                         url: "https://isc-transform-manager.vercel.app/",
                         previewImage: "./assets/previews/isc-transform-manager.png",
                         previewLabel: "Preview do ISC Transform Manager",
+                        private: true,
                         beta: true,
                         isNew: true
                     },
